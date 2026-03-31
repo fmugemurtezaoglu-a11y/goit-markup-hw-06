@@ -191,9 +191,22 @@ textarea {
 }
 
 .advantages-icon-box {
-  display: none;
-}
+  width: 264px;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8px;
+}
+.advantages-icon {
+  width: 64px;
+  height: 64px;
+  transform:scale(3);
+}
 .advantages-subtitle {
   margin-bottom: 8px;
   font-weight: 700;
@@ -349,8 +362,7 @@ textarea {
 /* FOOTER */
 
 .footer {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 0;
   background-color: var(--navy-blue);
 }
 
@@ -436,6 +448,10 @@ textarea {
   padding-left: 16px;
   color: var(--white);
   outline: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-input::placeholder {
@@ -445,9 +461,8 @@ textarea {
 .footer-btn {
   min-width: 165px;
   height: 40px;
-  margin: 0 auto;
-  border-radius: 4px;
   border: none;
+  border-radius: 4px;
   background-color: var(--iris);
   color: var(--white);
   display: flex;
@@ -455,9 +470,12 @@ textarea {
   justify-content: center;
   gap: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  cursor: pointer;
   transition: background-color var(--transition);
+  margin: 0 auto;
 }
 
 .footer-btn:hover,
@@ -469,6 +487,59 @@ textarea {
   fill: currentColor;
 }
 
+/* TABLET */
+@media screen and (min-width: 768px) {
+  .footer-container {
+    width: 584px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .footer-left,
+  .footer-right,
+  .footer-subscribe {
+    align-items: flex-start;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+
+  .footer-btn {
+    margin: 0;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer-container {
+    width: 1158px;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .footer-left {
+    margin-right: 120px;
+  }
+
+  .footer-right {
+    margin-right: 80px;
+  }
+}
 /* MODAL */
 
 .backdrop {
@@ -965,4 +1036,7 @@ textarea {
   .footer-right {
     margin-right: 80px;
   }
+}
+.mobile-menu {
+  display: none;
 }
